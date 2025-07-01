@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 >Guess The Number 1 to 10</h1>
+<div class="sty">
+  <table>
+    <tr>
+        <td><h2 class="four">Enter The Number :</h2> </td><td><input  id="one" placeholder="Guess The Number" class="fiv"><td>
+    </tr>
+    <tr>
+        <td><button onclick="chk()" class="jj">Check</button></td>
+    </tr>
+    <tr>
+       <td><p class="ee">Result : <b id="two" class="ee1">Start The Game</b></p></td>
+    </tr>
+    <tr>
+        <td><p class="jk">Your Score: <b id="three" class="jk2">0</b></p></td><td class="il">Attempt : <b id="six" class="xx">0</b></td>
+    </tr>
+</table>
+</div>
+<script>
+     var score=0
+     var at=0
+     function chk()
+    {
+     var ran=Math.random()
+     var ran1=Math.floor((ran*10)+1)
+     var a=document.getElementById("one")
+     var result=document.getElementById("three")
+     var res=document.getElementById("two")
+     var a1=a.value 
+     var att=document.getElementById("six")
+
+     console.log(a1)
+     if(ran1==Number(a1))
+     {
+         score++
+         res.textContent="You  are Right!"
+
+     }
+     else if(score>0)
+     {
+        score--
+        res.textContent="You are Wrong!"
+     }
+     result.textContent=score
+     console.log(score)
+     at++
+     att.textContent=at
+
+    }
+
+</script>
+</body>
+</html>
