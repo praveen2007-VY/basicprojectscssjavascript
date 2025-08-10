@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bode</title>
+    </head>
+    <style>
+        .bag{
+
+            width: 300px;
+            border: 3px dodgerblue solid;
+            border-radius: 30px;
+            align-items:center;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease-in-out;
+            padding-bottom: 20px;
+
+        }
+        .bag img{
+            width:250px;
+            height: 300px;
+            border: 3px dodgerblue solid;
+            border-radius: 30px;
+            
+        }
+        #car{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        header{
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 120px;
+
+        }
+        footer{
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 120px;
+        }
+        #car:hover .bag{
+            transform: scale(0.8);
+        }
+        #car .bag:hover{
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 10px 10px black;
+            background-color: dodgerblue;
+            border: 3px black solid;
+        }
+    </style>
+    <body>
+    <header>Noviles</header>
+    <div id="car">
+        <div class="bag">
+            <h3>Student</h3>
+            <img src="images.webp" alt="imd waiting">
+        </div>
+        <div class="bag">
+            <h3>Job Seekers</h3>
+            <img src="jobseek.jpeg" alt="imd waiting">
+        </div>
+        <div class="bag">
+            <h3>IT-Workers</h3>
+            <img src="IT.jpeg" alt="imd waiting">
+        </div>
+        <div class="bag">
+            <h3>Non-IT Workers</h3>
+            <img src="nonit.jpeg" alt="imd waiting">
+        </div>
+        <div class="bag">
+            <h3>Home Maker</h3>
+            <img src="cook.jpeg" alt="imd waiting">
+        </div>
+    </div>
+    <footer>sussess@gmail</footer>        
+    </body>
+</html>
