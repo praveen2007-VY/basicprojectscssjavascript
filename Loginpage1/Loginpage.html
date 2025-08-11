@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+    }
+   .Bode{
+    width: 35%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    margin-top: 165px;
+    border-radius: 20px;
+   }
+   body{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:brown;
+   }
+   h1{
+    margin: 0px;
+   }
+   .Bode td{
+      padding-bottom: 20px;
+   }
+   .Bode input{
+    width: 300px;
+    height: 20px;
+    border-radius: 20px;
+   }
+   #j{
+      width: 50px;
+      height: 20px;
+   }
+   ::placeholder{
+    text-align: center;
+   }
+   .Bode button{
+    font-size: large;
+    border-radius: 20px;
+    color: green
+    
+   }
+</style>
+<body>
+    <div class="Bode">
+        <h1>Login Page</h1>
+        <br>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="ni"><b>Name</b></label></td>
+                    <td><input type="text" id="ni" placeholder="Enter Your Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="no"><b>Number</b></label></td>
+                    <td><input type="number" id="no" placeholder="Enter Mobile Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="np"><b>Email</b></label></td>
+                    <td><input type="email" id="np" placeholder="Enter Your Email"></td>
+                </tr>
+                <tr>
+                    <td><b>Conform</b></td>
+                    <td><input type="radio" name="p" id="j">Yes<input type="radio" name="p"id="j">No</td>
+                </tr>
+                <tr>
+                    <td id="ug"><button onclick="Loginpage.html"><b>Sumit</b></button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
