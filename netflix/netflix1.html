@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+        h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main1{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .main12{
+            position: absolute;
+            top: 245px;
+            left: 25%;
+            right: 25%;
+            text-align: center;
+            color: azure;
+            font-size: 25px;
+        }
+        #img1{
+            width: 100%;
+            height: 100%;
+            filter: brightness(26%);
+        }
+        .img22{
+            position: absolute;
+            top: 25px;
+            left: 150px;
+            width: 10%;
+            height: 10%;
+        }
+        .img22 img{
+            width: 160px;
+            filter: brightness(100%);
+        }
+        .main13{
+            position: absolute;
+            top: 20px;
+            right: 220px;
+        }
+        .main14{
+            position: absolute;
+            top: 480px;
+            left: 30%;
+        }
+        .main14 input{
+            height: 50px;
+            width: 340px;
+            background-color: rgba(20, 17, 17, 0.7);
+            border: white 0.5px solid;
+            color: white;
+            border-radius: 5px;
+        }
+        .main21{
+            position: absolute;
+            top: 75%;
+            left: 22%;
+        }
+        .main21 input{
+             height: 50px;
+            width: 410px;
+            background-color: rgba(20, 17, 17, 0.7);
+            border: white 1px solid;
+            border-radius: 3px;
+            color: white;
+        }
+        .main21 button{
+         height: 58px;
+            width: 240px;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-size: x-large;   
+        }
+        .main21 ::placeholder{
+            padding-left: 25px;
+        }
+        .main14 button{
+            height: 58px;
+            width: 220px;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-size: x-large;
+        }
+        .main14 ::placeholder{
+            color: rgb(194, 192, 192);
+            padding-left: 25px;
+    
+
+        }
+        #fon{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            height: 120px;
+            
+        }
+        #uh{
+            font-weight: 100;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #sma{
+            font-size: 20px;
+        }
+        .main13 select{
+            background-color: rgba(142, 140, 140, 0.2);
+            border: white 0.5px solid;
+            border-radius: 2px;
+            color: white;
+            height: 30px;
+            width: 120px;
+
+        }
+        .main13 option{
+            background-color: black;
+            color: white;
+        }
+        .main13 button{
+            height: 35px;
+            width: 80px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+
+        }
+        .main2{
+            height: 100vh;
+            width: 100vw;
+            background-color:black;
+            position: relative;
+        }
+        .tre{
+            top: 60px;
+            left: 80px;
+            color: azure;
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .movi{
+            height: 300px;
+            width: 200px;
+            border: white 1px solid;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        
+        }
+        #hov{
+            position: absolute;
+            top: 160px;
+            height: 350px;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .movi img{
+            height: 300px;
+            width: 200px;
+        }
+        #hov:hover .movi{
+            transform: scale(0.9);
+        }
+        #hov .movi:hover{
+            transform: scale(1.2) ;
+            cursor: pointer;
+            filter: brightness(100%);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main1">
+        <img src="img2.jpg" id="img1">
+        <div class="img22">
+            <img src="text2.png" id="img2">
+        </div>
+        <div class="main12">
+            <h1 id="fon">Unlimited movies,TV <br>shows and more</h1>
+            <p id="uh">Start at ₹149. Cancel at any time.</p>
+            <p id="sma">Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+        <div class="main13">
+            <table>
+                <tr>
+                    <td>
+                        <select>
+                            <option>English</option>
+                            <option>தமிழ்</option>
+                        </select>
+                    </td>
+                     <td>
+                        <button><b>Sign in</b></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main14">
+            <table>
+                <tr>
+                     <td><input type="email" placeholder="Email Address"></td>
+                     <td><button><b>Get Started ></b></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="main2">
+     <div class="tre">
+        <h1>Trending Now</h1>
+     </div>
+      <div id="hov">
+        <div class="movi">
+            <img src="coli.jpeg">
+        </div>
+        <div class="movi">
+            <img src="sqit.jpg">
+        </div>
+        <div class="movi">
+            <img src="stanger.jpg">
+        </div>
+        <div class="movi">
+            <img src="mhest.jpeg">
+        </div>
+        <div class="movi">
+            <img src="dam.jpeg">
+        </div>
+      </div>
+      <div class="main21">
+            <table>
+                <tr>
+                     <td><input type="email" placeholder="Email Address"></td>
+                     <td><button><b>Get Started ></b></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
