@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+      }  
+        .main1{
+            height: 100vh;
+            width: 50vw;
+            position: absolute;
+        }
+        .main11{
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            background-color: white;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 20px;
+            filter: blur(10);
+            
+        }
+        .main11 input{
+            border-radius: 10px;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        .main11 button:hover{
+            cursor: pointer;
+            color: azure;
+            background-color: black;
+            transform: scale(1.1);
+
+        }
+        .main11 h1{
+            font-size: xx-large;
+            margin: 0px;
+            
+        }
+        .main11 td{
+           padding-bottom: 20px;
+        }
+        .main2{
+            height: 100vh;
+            width: 50vw;
+            position: absolute;
+            right: 1px;
+        
+        }
+        .main1m{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+        }
+        .main21{
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 20px;
+            border: white 5px solid;
+            transition: all 0.5s ease-in-out;
+        }
+        .main21{
+            color: azure;
+        }
+        .main21 img{
+            height: 200px;
+            width: 200px;
+            border-radius: 40%;
+        }
+        #b{
+           height: 40px;
+           width: 100px;
+           border-radius: 20px;
+           padding: 10px;
+           font-size: large;
+
+        }
+        .main22{
+            position: absolute;
+            top: 85%;
+            right: 260px
+            
+            
+        }
+        .b1{
+           height: 40px;
+           width: 100px;
+           border-radius: 20px;
+           padding: 10px;
+           font-size: large;
+
+        }
+        .main22 td{
+             padding-left: 40px;
+        }
+        .main22 button:hover{
+           color: azure;
+           background-color: black;
+           cursor: pointer;
+        }
+        #h11{
+            display: none;
+        }
+        #h33{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main1m">
+        <div class="main1">
+            <div class="main11">
+                <h1>Create Profile</h1>
+                <form>
+                    <table>
+                        <tr>
+                            <td><label for="ny"  id="h1"><b>Name:</b></label></td>
+                            <td><input type="text" placeholder="Enter your Name" id="ny"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="no"  id="h1"><b>Enter img Address: </b></label></td>
+                            <td><input  type="text" placeholder="Enter Image addres" id="no"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="np"  id="h1"><b>Enter your Bio:</b></label></td>
+                            <td><input  type="text" placeholder="Enter Your Bio" id="np"></td>
+                        </tr>
+                    </table>
+                </form>
+                <button id="b" onclick="update()">Submit</button>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="main21" id="ss">
+                <h1 id="s1">Profile</h1>
+                <h1 class="hid" id="h11">Name</h1>
+                <img src="black.png" id="h22">
+                <h1 class="hid" id="h33">Bio</h1>
+            </div>
+            <div class="main22">
+                <table>
+                    <tr>
+                        <td><button class="b1" onclick="light()">Light</button></td>
+                        <td><button class="b1" onclick="dark()">Dark</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     
+    </div>
+    <script>
+    function update()
+    {
+
+        let a= document.getElementById("ny").value;
+        let b= document.getElementById("no").value;
+        let c= document.getElementById("np").value;
+        document.getElementById("h11").innerHTML=a;
+        document.getElementById("h22").src=b;
+        document.getElementById("h33").innerHTML=c;
+        document.getElementById("h11").style.display="block";
+        document.getElementById("h33").style.display="block";
+
+    }
+    function light()
+    {
+        document.getElementById("ss").style.color= "black";
+        document.getElementById("ss").style.backgroundColor="white";
+        document.getElementById("ss").style.border="black 5px solid";
+        
+    }
+    function dark()
+    {
+        document.getElementById("ss").style.color= "white";
+        document.getElementById("ss").style.backgroundColor="black";
+        document.getElementById("ss").style.border="white 5px solid";
+       
+    }
+    </script>
+</body>
+</html>
