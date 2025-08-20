@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .main1{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(30, 243, 243);
+            overflow-x: hidden;
+            
+            
+        }
+        .main11{
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 400px;
+            width: 400px;
+            color: rgb(7, 0, 0);
+            box-shadow: 0px 0px 15px black;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            filter: brightness(100%);
+        }
+        .main11 input{
+            height: 30px;
+            width: 270px;
+            border: rgb(217, 214, 214) 3px solid;
+            border-radius: 10px;
+
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        .main11 h1{
+            margin: 0px;
+        }
+        .main11 td{
+            padding-top: 10px;
+        }
+        #d{
+            color: white;
+            background-color: rgb(11, 236, 11);
+            width: 280px;
+            height: 40px;
+            font-size: large;
+            border-radius: 7px;
+        }
+        #d:hover{
+            background-color: rgb(23, 176, 23);
+            cursor: pointer;
+        }
+        .main11 span{
+            font-size: small;
+            color: red;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #h1{
+            display: none;
+        }
+        #h2{
+            display: none;
+        }
+        #h3{
+            display: none;
+        }
+        .main12{
+            position: absolute;
+            top: 15%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main1">
+        <div class="main11">
+            <form  onsubmit="return summit()">
+                <table>
+                    <tr>
+                        <td><label for="np" id="ss">Name : </label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter Your Name" id="np"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="h1"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="no">Mobile Phone : </label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" placeholder="Enter your Mobile number" id="no"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="h2"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="em">Enter Email Id :  </label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" placeholder="Enter your Email" id="em"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="h3"></span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="d" placeholder="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="main12">
+           <h1>Simple Form Validation</h1>
+        </div>
+    </div>
+    <script>
+       function summit()
+       {
+          let name=document.getElementById("np").value;
+          let phone=document.getElementById("no").value;
+          let email=document.getElementById("em").value;
+          let che="@gmail.com";
+          if(name==""){
+             document.getElementById("h1").innerHTML="Kindly Enter Name";
+             document.getElementById("h1").style.display="block";
+              return false;
+          }
+          else{
+            document.getElementById("h1").innerHTML="";
+          }
+          if(phone==""){
+            document.getElementById("h2").innerHTML="Kindly Enter Mobile Number";
+            document.getElementById("h2").style.display="block";
+            return false;
+          }
+          else{
+            document.getElementById("h2").innerHTML="";
+          }
+          if(email==""){
+            document.getElementById("h3").innerHTML="Kindly Enter Email Id";
+            document.getElementById("h3").style.display="block";
+            return false;
+          }
+          if(email.length<=10 ){
+            document.getElementById("h3").innerHTML="Enter valid Email Id";
+            document.getElementById("h3").style.display="block";
+            return false;
+          }
+          let p=false;
+          let j=0;
+          if(che.length>10){
+            for(let i=0;i<email.length;i++){
+                if(email[i]=='@'){
+                    p=true;
+                }
+                if(p){
+                    if(email[i]!=che[j]){
+                         document.getElementById("h3").innerHTML="Enter valid Email Id";
+                         document.getElementById("h3").style.display="block";
+                         return false;
+                         j++;
+                    }
+                }
+
+            }
+          }
+          else { 
+            document.getElementById("h3").innerHTML=""
+            
+          }
+          
+        alert("submit Successfully");
+        return true;
+    }
+    </script>
+</body>
+</html>
